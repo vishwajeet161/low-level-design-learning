@@ -34,9 +34,6 @@ The repository is organized as follows:
 ## Languages
 
 - Java
-- Python
-- C++
-- (Add more as needed)
 
 ## Problems
 
