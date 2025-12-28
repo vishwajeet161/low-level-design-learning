@@ -5,31 +5,14 @@ This repository contains solutions to common Low-Level Design (LLD) problems fre
 ## Table of Contents
 
 - [Overview](#overview)
-- [Structure](#structure)
 - [Languages](#languages)
 - [Problems](#problems)
 - [How to Run](#how-to-run)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
 Low-Level Design involves designing individual components and their interactions within a system. This repo serves as a practice ground for implementing various design patterns, data structures, and algorithms that form the building blocks of robust software systems.
-
-## Structure
-
-The repository is organized as follows:
-
-```
-├── problems/          # Individual problem solutions
-│   ├── design-patterns/
-│   ├── data-structures/
-│   ├── system-design/
-│   └── algorithms/
-├── utils/             # Common utilities and helpers
-├── tests/             # Unit tests for the solutions
-└── docs/              # Additional documentation
-```
 
 ## Languages
 
@@ -42,7 +25,6 @@ The repository is organized as follows:
 - Factory
 - Observer
 - Strategy
-- And more...
 
 ### Data Structures
 - Linked List
@@ -56,7 +38,7 @@ The repository is organized as follows:
 - Elevator System
 - Library Management
 - Online Bookstore
-- And more...
+
 
 *(This list will be updated as problems are added)*
 
@@ -78,11 +60,6 @@ The repository is organized as follows:
    java Main
    ```
 
-5. For Python:
-   ```bash
-   python main.py
-   ```
-
 ## Contributing
 
 Feel free to contribute by:
@@ -93,6 +70,3 @@ Feel free to contribute by:
 
 Please follow the existing code style and add appropriate comments.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
