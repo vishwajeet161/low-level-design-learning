@@ -14,8 +14,10 @@ public class Driver extends User {
         return this.vehicle;
     }
 
-
-
+    @Override
+    public void notify(String message) {
+        System.out.println("Notification to Driver " + this.Name + ": " + message);
+    }
     
 
 

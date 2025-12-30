@@ -6,4 +6,9 @@ public class Passenger extends User {
         super(Name, Email, location);
     }
 
+    @Override
+    public void notify(String message) {
+        System.out.println("Notification to Passenger " + this.Name + ": " + message);
+    }
+
 }

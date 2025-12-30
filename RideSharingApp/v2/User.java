@@ -30,5 +30,7 @@ abstract class User {
     public void setName(String name) {
         Name = name;
     }
-    
+
+    public abstract void notify(String message);
+
 }
