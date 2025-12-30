@@ -21,6 +21,15 @@ public class RideMatchingSystem {
             return;
         }
         passenger.notify("Ride booked with driver " + assignedDriver.getName());
+        availableDrivers.remove(assignedDriver);
+        Ride ride = new Ride(passenger, assignedDriver, distance, fareStrategy, 0);
+        ride.calculateFare();
+        passenger.notify("Your fare is: " + ride.getFare());
+        assignedDriver.notify("You have been assigned a ride with passenger " + passenger.getName());
+
+        ride.updateRideStatus(RideStatus.ONGOING);
+        ride.updateRideStatus(RideStatus.COMPLETED);
+        availableDrivers.add(assignedDriver);
     }
 
     private Driver findNearestDriver(Location location){
