@@ -34,6 +34,7 @@ Low-Level Design involves designing individual components and their interactions
 - Graph
 
 ### System Design
+- Ride Sharing App
 - Parking Lot
 - Unix File Search System
 - Elevator System
