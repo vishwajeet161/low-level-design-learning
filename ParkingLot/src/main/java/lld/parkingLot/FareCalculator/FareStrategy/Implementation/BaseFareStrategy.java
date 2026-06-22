@@ -21,11 +21,9 @@ public class BaseFareStrategy implements FareStrategy {
             case LARGE:
                 rate = LARGE_VEHICLE_RATE;
                 break;
-
             case SMALL:
                 rate = SMALL_VEHICLE_RATE;
-                break;
-        
+                break;       
             default:
                 rate = SMALL_VEHICLE_RATE;
                 break;
