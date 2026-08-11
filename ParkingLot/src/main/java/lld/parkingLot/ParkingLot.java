@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 import lld.parkingLot.FareCalculator.FareCalculator;
+import lld.parkingLot.FareCalculator.FareStrategy.FareStrategy;
+import lld.parkingLot.FareCalculator.FareStrategy.Implementation.BaseFareStrategy;
+import lld.parkingLot.FareCalculator.FareStrategy.Implementation.PeakHourFareStrategy;
 import lld.parkingLot.ParkingSpot.ParkingSpot;
 import lld.parkingLot.Vehicle.Vehicle;
 import lld.parkingLot.Vehicle.VehicleSize;
@@ -39,7 +42,7 @@ public class ParkingLot {
             VehicleSize.LARGE, oversizedSpots
         ));
 
-        FareCalculator fareCalculatorMain = new FareCalculator(null);
+        FareCalculator fareCalculatorMain = new FareCalculator(new ArrayList<FareStrategy>(List.of(new BaseFareStrategy(), new PeakHourFareStrategy()))); // Add your fare strategies here
 
         ParkingLot parkingLot = new ParkingLot(parkingManagerMain, fareCalculatorMain);
 
@@ -49,7 +52,8 @@ public class ParkingLot {
         System.out.println("Ticket ID for vehicle XYZ789: " + tt2.getTicketId() + " at spot number: " + tt2.getParkingSpot().getSpotNumber());
         Ticket tt3 = parkingLot.enterVehicle(new Truck("DEF456"));
         System.out.println("Ticket ID for vehicle DEF456: " + tt3.getTicketId() + " at spot number: " + tt3.getParkingSpot().getSpotNumber());
-        Ticket tt4 = parkingLot.enterVehicle(new Truck("GHI789")); // This should print "No available parking spot for vehicle: GHI789"
+        parkingLot.leaveVehicle(tt1);
+        // Ticket tt4 = parkingLot.enterVehicle(new Truck("GHI789")); // This should print "No available parking spot for vehicle: GHI789"
         // System.out.println("Ticket ID for vehicle GHI789: " + tt4.getTicketId() + " at spot number: " + tt4.getParkingSpot().getSpotNumber());
 
     } 

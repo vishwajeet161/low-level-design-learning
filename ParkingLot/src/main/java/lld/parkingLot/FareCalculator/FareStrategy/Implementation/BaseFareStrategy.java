@@ -28,7 +28,8 @@ public class BaseFareStrategy implements FareStrategy {
                 rate = SMALL_VEHICLE_RATE;
                 break;
         }
-        fare = fare.add(rate.multiply(ticket.calculateParkingDuration()));
+        fare = fare.add(rate.multiply(ticket.calculateParkingDuration()==BigDecimal.ZERO?new BigDecimal("60"):ticket.calculateParkingDuration()));
+        // System.out.println("BaseFareStrategy: Calculated Parking Duration for vehicle " + ticket.calculateParkingDuration());
         return fare;
     }
     

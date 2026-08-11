@@ -14,7 +14,7 @@ public class FareCalculator {
     }
 
     public BigDecimal calculateFare(Ticket ticket) {
-        BigDecimal fare = BigDecimal.ZERO;
+        BigDecimal fare = new BigDecimal("60");//BigDecimal.ZERO;
         for (FareStrategy strategy : fareStrategies) {
             fare = strategy.CalculateFare(ticket, fare);
         }
